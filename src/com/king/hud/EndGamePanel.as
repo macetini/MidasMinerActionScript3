@@ -4,7 +4,6 @@ package com.king.hud
 	import com.king.hud.events.ScorePanelEvent;
 	import com.king.meta.constants.TextureConstants;
 	import com.king.hud.events.EndGamePanelEvent;
-	import com.king.utils.ResourcesUtil;
 	import starling.display.Button;
 	import starling.display.DisplayObjectContainer;
 	import starling.events.Event;
@@ -53,14 +52,17 @@ package com.king.hud
 		{
 			e.target.removeEventListener(Event.ADDED_TO_STAGE, onAdded);
 			
-			_gameInfo = new TextField(160, 120, ResourcesUtil.grs("endGameInfo"), FONT, FONT_SIZE, Color.BLACK, true);
+			_gameInfo = new TextField(160, 120, 
+				"Create rows or columns of three or more gems by switching places between two of them at the time.", 
+				FONT, FONT_SIZE, Color.BLACK, true);			
+				
 			_gameInfo.y = 20;
 			_gameInfo.hAlign = HAlign.CENTER;
 			_gameInfo.vAlign = VAlign.CENTER;
 			
 			this.addChild(_gameInfo);
 			
-			_endGameBtn = new Button(TextureConstants.HUD_BUTTON_UP_T, ResourcesUtil.grs("endGameBtn"), TextureConstants.HUD_BUTTON_DOWN_T);
+			_endGameBtn = new Button(TextureConstants.HUD_BUTTON_UP_T, "End Game", TextureConstants.HUD_BUTTON_DOWN_T);			
 			
 			_endGameBtn.x = (this.width - _endGameBtn.width) / 2;
 			_endGameBtn.y = _gameInfo.y + _gameInfo.height;

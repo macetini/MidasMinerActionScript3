@@ -1,0 +1,18 @@
+{
+	"config": "air",
+	"compilerOptions": {
+		"source-path": [
+			"src/",
+			"libssrc/"			
+		],
+		"library-path": [			
+			//"libs/"
+		],
+		"output": "bin/King.swf",
+		"locale": [
+      		"en_US"
+    	]
+	},
+	"application": "application.xml",
+	"mainClass": "Main"
+}

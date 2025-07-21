@@ -2,7 +2,6 @@ package com.king.hud
 {
 	import com.king.group.events.GroupEvent;
 	import com.king.hud.events.ScorePanelEvent;
-	import com.king.utils.ResourcesUtil;
 	import flash.display.Bitmap;
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
@@ -50,7 +49,7 @@ package com.king.hud
 		
 		protected function onRemoved(e:Event):void
 		{
-			_scoreInfo.text = ResourcesUtil.grs("scoreInfo1") + "0" + ResourcesUtil.grs("scoreInfo2");
+			_scoreInfo.text = 'Score\n0\nTime Left\n';
 			_timeCounterInfo.text = "01:00";
 		}
 		
@@ -60,7 +59,7 @@ package com.king.hud
 			
 			this.addChild(new Image(TextureConstants.HUD_PANEL_T));
 			
-			var scoreInfoStr:String = ResourcesUtil.grs("scoreInfo1") + GameVariables.Score.toString() + ResourcesUtil.grs("scoreInfo2");
+			var scoreInfoStr:String = 'Score\n' + GameVariables.Score.toString() + '\nTime Left\n';
 			
 			_scoreInfo = new TextField(this.width, 90, scoreInfoStr, FONT, FONT_SIZE, Color.WHITE, true);
 			_scoreInfo.y = 16;
@@ -79,7 +78,7 @@ package com.king.hud
 		
 		public function scoreChange(e:GroupEvent):void
 		{
-			_scoreInfo.text = ResourcesUtil.grs("scoreInfo1") + (GameVariables.Score * SCORE_MULTYPLY).toString() + ResourcesUtil.grs("scoreInfo2");
+			_scoreInfo.text = 'Score\n' + (GameVariables.Score * SCORE_MULTYPLY).toString() + '\nTime Left\n';
 		}
 		
 		protected function timerEventHandler(e:TimerEvent):void

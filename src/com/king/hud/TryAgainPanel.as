@@ -3,7 +3,6 @@ package com.king.hud
 	import com.king.group.events.GroupEvent;
 	import com.king.hud.events.ScorePanelEvent;
 	import com.king.hud.events.TryAgainPanelEvent;
-	import com.king.utils.ResourcesUtil;
 	import flash.display.Bitmap;
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
@@ -68,7 +67,7 @@ package com.king.hud
 			
 			this.addChild(new Image(TextureConstants.HUD_PANEL_T));
 			
-			var tryAgainInfoStr:String = ResourcesUtil.grs("tryAgainInfo") + GameVariables.Score * ScorePanel.SCORE_MULTYPLY;
+			var tryAgainInfoStr:String = ' Time is up!\nScore:\n' + GameVariables.Score * ScorePanel.SCORE_MULTYPLY;
 			
 			_tryAgainInfo =  new TextField(this.width, 90, tryAgainInfoStr, FONT, FONT_SIZE, Color.WHITE, true);
 			_tryAgainInfo.y = 17;
@@ -77,7 +76,7 @@ package com.king.hud
 			
 			this.addChild(_tryAgainInfo);
 			
-			_tryAgainBtn = new Button(TextureConstants.HUD_BUTTON_UP_T, ResourcesUtil.grs("tryAgainBtn"), TextureConstants.HUD_BUTTON_DOWN_T);
+			_tryAgainBtn = new Button(TextureConstants.HUD_BUTTON_UP_T, "Try Again", TextureConstants.HUD_BUTTON_DOWN_T);
 			_tryAgainBtn.x = (this.width - _tryAgainBtn.width) / 2;
 			_tryAgainBtn.y = _tryAgainInfo.y + _tryAgainInfo.height + 1;
 			
