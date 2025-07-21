@@ -8,10 +8,7 @@
 		"library-path": [			
 			//"libs/"
 		],
-		"output": "bin/King.swf",
-		"locale": [
-      		"en_US"
-    	]
+		"output": "bin/King.swf"
 	},
 	"application": "application.xml",
 	"mainClass": "Main"
