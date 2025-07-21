@@ -1,9 +1,10 @@
 package com.king.hud 
 {
 	import com.king.group.events.GroupEvent;
+	import com.king.hud.events.EndGamePanelEvent;
 	import com.king.hud.events.ScorePanelEvent;
 	import com.king.meta.constants.TextureConstants;
-	import com.king.hud.events.EndGamePanelEvent;
+
 	import starling.display.Button;
 	import starling.display.DisplayObjectContainer;
 	import starling.events.Event;

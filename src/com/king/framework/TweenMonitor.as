@@ -1,9 +1,10 @@
 package com.king.framework
 {
 	import com.king.framework.events.TweenMonitorEvent;
-	import starling.events.EventDispatcher;
+
 	import starling.animation.Tween;
 	import starling.events.Event;
+	import starling.events.EventDispatcher;
 	
 	public class TweenMonitor extends EventDispatcher
 	{		

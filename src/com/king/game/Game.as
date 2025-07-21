@@ -3,27 +3,20 @@ package com.king.game
 	import com.king.graphics.FlameClip;
 	import com.king.group.Group;
 	import com.king.group.elements.GroupElement;
+	import com.king.group.events.GroupEvent;
 	import com.king.hud.EndGamePanel;
 	import com.king.hud.ScorePanel;
-	import com.king.hud.events.ScorePanelEvent;
-	import com.king.hud.events.EndGamePanelEvent;
-	import com.king.group.events.GroupEvent;
-	import com.king.meta.constants.GraphicConstants;
-	import com.king.meta.constants.TextureConstants;
 	import com.king.hud.TryAgainPanel;
+	import com.king.hud.events.EndGamePanelEvent;
+	import com.king.hud.events.ScorePanelEvent;
 	import com.king.hud.events.TryAgainPanelEvent;
+	import com.king.meta.constants.TextureConstants;
 	import com.king.meta.variables.GameVariables;
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.geom.Point;
+
 	import starling.core.Starling;
 	import starling.display.Image;
-	import starling.display.MovieClip;
 	import starling.display.Sprite;
 	import starling.events.Event;
-	import starling.events.Touch;
-	import starling.textures.Texture;
-	import starling.textures.TextureAtlas;
 	
 	/**
 	 * ...

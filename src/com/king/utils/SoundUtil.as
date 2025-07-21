@@ -1,9 +1,10 @@
 package com.king.utils
 {
+	import com.king.meta.constants.SoundConstants;
+
 	import flash.media.Sound;
 	import flash.media.SoundTransform;
 	import flash.utils.setTimeout;
-	import com.king.meta.constants.SoundConstants;
 
 	public final class SoundUtil
 	{

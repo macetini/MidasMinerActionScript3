@@ -1,25 +1,23 @@
 package com.king.group
 {
+	import com.king.framework.TweenMonitor;
 	import com.king.framework.events.TweenMonitorEvent;
 	import com.king.group.elements.GroupElement;
 	import com.king.group.elements.event.GroupElementEvent;
-	import com.king.hud.events.ScorePanelEvent;
-	import com.king.meta.constants.GraphicConstants;
-	import com.king.meta.constants.TextureConstants;
-	import com.king.meta.variables.GameVariables;
-	import com.king.framework.TweenMonitor;
 	import com.king.group.events.GroupEvent;
+	import com.king.hud.events.ScorePanelEvent;
+	import com.king.meta.variables.GameVariables;
 	import com.king.utils.SoundUtil;
+
 	import flash.events.TimerEvent;
 	import flash.geom.Rectangle;
 	import flash.utils.Timer;
+
 	import starling.animation.Transitions;
 	import starling.animation.Tween;
 	import starling.core.Starling;
 	import starling.display.Sprite;
-	import starling.display.Image;
 	import starling.events.Event;
-	import starling.textures.Texture;
 	import starling.events.Touch;
 	import starling.events.TouchEvent;
 	import starling.events.TouchPhase;

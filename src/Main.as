@@ -1,12 +1,14 @@
 package  
 {
+	import com.king.game.Game;
+
 	import flash.display.Sprite;
-	import flash.display3D.Context3DRenderMode;
-	import flash.events.Event;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
+	import flash.display3D.Context3DRenderMode;
+	import flash.events.Event;
+
 	import starling.core.Starling;
-	import com.king.game.Game;
 	
 	/**
 	 * ...

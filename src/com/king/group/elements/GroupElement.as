@@ -1,12 +1,14 @@
 package com.king.group.elements
 {
-	import com.king.group.elements.event.GroupElementEvent;
 	import com.king.group.Group;
+	import com.king.group.elements.event.GroupElementEvent;
 	import com.king.meta.constants.GraphicConstants;
 	import com.king.utils.*;
+
 	import flash.events.TimerEvent;
 	import flash.geom.Point;
 	import flash.utils.Timer;
+
 	import starling.animation.*;
 	import starling.core.*;
 	import starling.display.*;

@@ -1,7 +1,8 @@
 package com.king.utils
 {
-	import starling.textures.Texture;
 	import com.king.meta.constants.TextureConstants;
+
+	import starling.textures.Texture;
 	
 	/**
 	 * ...

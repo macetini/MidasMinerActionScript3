@@ -1,8 +1,8 @@
 package com.king.meta.constants 
 {
-	import flash.display.Bitmap;
-	import starling.textures.Texture;
 	import com.king.meta.constants.GraphicConstants;
+
+	import starling.textures.Texture;
 	
 	/**
 	 * ...

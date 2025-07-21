@@ -1,26 +1,20 @@
 package com.king.hud 
 {
-	import com.king.group.events.GroupEvent;
-	import com.king.hud.events.ScorePanelEvent;
 	import com.king.hud.events.TryAgainPanelEvent;
-	import flash.display.Bitmap;
-	import flash.events.TimerEvent;
-	import flash.utils.Timer;
+	import com.king.meta.constants.TextureConstants;
+	import com.king.meta.variables.GameVariables;
+
 	import starling.display.Button;
 	import starling.display.DisplayObjectContainer;
 	import starling.display.Image;
+	import starling.events.Event;
 	import starling.events.Touch;
 	import starling.events.TouchEvent;
 	import starling.events.TouchPhase;
 	import starling.text.TextField;
-	import starling.events.Event;
-	import starling.textures.Texture;
+	import starling.utils.Color;
 	import starling.utils.HAlign;
 	import starling.utils.VAlign;
-	import starling.utils.Color;
-	import com.king.meta.constants.GraphicConstants;
-	import com.king.meta.variables.GameVariables;
-	import com.king.meta.constants.TextureConstants;
 	
 	/**
 	 * ...
