@@ -1,5 +1,7 @@
 # Midas Miner Clone. (Adobe Air + Starling/Stage3d)
 
+Old Adobe Flash project I created in 2013. Modernized to Harman Air in 2025.
+
 Stage3D/Starling<br />
 Harman Air<br />
 Visual Studio Code
