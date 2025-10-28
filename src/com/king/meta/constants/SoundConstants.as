@@ -1,5 +1,9 @@
 package com.king.meta.constants
 {
+	/**
+	 * Sound constants
+	 * @author mc
+	 */
 	public final class SoundConstants
 	{
 		public function SoundConstants():void

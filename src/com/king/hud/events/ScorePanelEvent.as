@@ -2,7 +2,7 @@ package com.king.hud.events
 {	
 	import starling.events.Event;
 	/**
-	 * ...
+	 * Score panel event
 	 * @author mc
 	 */
 	public class ScorePanelEvent extends Event 

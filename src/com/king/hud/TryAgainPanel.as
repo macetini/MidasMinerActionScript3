@@ -17,7 +17,7 @@ package com.king.hud
 	import starling.utils.VAlign;
 	
 	/**
-	 * ...
+	 * Try again panel
 	 * @author Marko Cetinic
 	 */
 	public class TryAgainPanel extends DisplayObjectContainer

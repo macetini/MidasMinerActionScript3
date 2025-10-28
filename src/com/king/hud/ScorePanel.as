@@ -17,7 +17,7 @@ package com.king.hud
 	import starling.utils.VAlign;
 	
 	/**
-	 * ...
+	 * Score panel
 	 * @author mc
 	 */
 	public class ScorePanel extends DisplayObjectContainer

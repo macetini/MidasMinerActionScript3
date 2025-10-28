@@ -5,7 +5,7 @@ package com.king.meta.constants
 	import starling.textures.Texture;
 	
 	/**
-	 * ...
+	 * Texture constants
 	 * @author mc
 	 */
 	public final class TextureConstants 

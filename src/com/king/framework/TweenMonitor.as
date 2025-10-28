@@ -6,15 +6,26 @@ package com.king.framework
 	import starling.events.Event;
 	import starling.events.EventDispatcher;
 	
+	/**	 
+	 * Monitors active tweens and dispatches events when all animations are complete.
+	 * @author mc
+	 */
 	public class TweenMonitor extends EventDispatcher
 	{		
 		protected var _monitTweensVec:Vector.<Tween> = null;
 		
+		/**
+		 * Constructor
+		 */
 		public function TweenMonitor()
 		{
 			super();
 		}
 
+		/**
+		 * Removes a tween from monitoring when it is removed from the juggler.
+		 * @param	e	Event containing the tween to be removed.
+		 */
 		protected function removeFromJuggler(e:Event):void
 		{
 			var tween:Tween = e.target as Tween;
@@ -31,6 +42,10 @@ package com.king.framework
 				this.dispatchEvent(new TweenMonitorEvent(TweenMonitorEvent.TWEEN_ANIMATIONS_COMPLETE));
 		}
 		
+		/**
+		 * Adds a tween to be monitored.
+		 * @param	tween	Tween to be monitored.
+		 */
 		public function addTween(tween:Tween):void
 		{
 			if (_monitTweensVec == null)
@@ -40,6 +55,9 @@ package com.king.framework
 			_monitTweensVec.push(tween);
 		}
 		
+		/**
+		 * Purges the monitor and removes all references to monitored tweens.
+		 */
 		public function purge():void
 		{
 			if (_monitTweensVec == null)

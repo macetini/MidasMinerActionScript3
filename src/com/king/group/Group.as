@@ -215,14 +215,14 @@ package com.king.group
 		
 		protected function particleCircleStoped(e:GroupElementEvent):void
 		{
-			e.target.removeEventListener(GroupElementEvent.PARTICLE_CIRCLE_STOPED, particleCircleStoped);
+			e.target.removeEventListener(GroupElementEvent.PARTICLE_CIRCLE_STOPPED, particleCircleStoped);
 			
 			_inactivityTimer.start();
 		}
 		
 		protected function removeInactivityMarker():void
 		{
-			this.removeEventListener(GroupElementEvent.PARTICLE_CIRCLE_STOPED, particleCircleStoped);
+			this.removeEventListener(GroupElementEvent.PARTICLE_CIRCLE_STOPPED, particleCircleStoped);
 			
 			_inactivityTimer.reset();
 			
@@ -233,7 +233,7 @@ package com.king.group
 		
 		protected function inactivityTimerComplete(e:TimerEvent):void
 		{
-			this.addEventListener(GroupElementEvent.PARTICLE_CIRCLE_STOPED, particleCircleStoped);
+			this.addEventListener(GroupElementEvent.PARTICLE_CIRCLE_STOPPED, particleCircleStoped);
 			
 			var length:int = GroupElemsVec.length;
 			

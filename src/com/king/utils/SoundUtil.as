@@ -6,11 +6,15 @@ package com.king.utils
 	import flash.media.SoundTransform;
 	import flash.utils.setTimeout;
 
+	/**
+	 * Utility class for playing sounds
+	 * @author mc
+	 */
 	public final class SoundUtil
 	{
 		public static const DEBUG:Boolean=false;
 
-		public static var DEFAULT_VOLUMN:Number = 1.0;
+		public static var DEFAULT_VOLUME:Number = 1.0;
 		
 		public function SoundUtil():void
 		{
@@ -20,7 +24,7 @@ package com.king.utils
 		public static function playSound(sound:Class, vol:Number=0):void
 		{
 			if (vol == 0)
-				vol=DEFAULT_VOLUMN;
+				vol=DEFAULT_VOLUME;
 
 			var sfx:Sound=new sound() as Sound;
 

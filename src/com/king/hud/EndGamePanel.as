@@ -17,7 +17,7 @@ package com.king.hud
 	import starling.utils.VAlign;
 	
 	/**
-	 * ...
+	 * End game panel
 	 * @author mc
 	 */
 	public class EndGamePanel extends DisplayObjectContainer

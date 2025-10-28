@@ -26,7 +26,7 @@ package com.king.group.elements
 	public class GroupElement extends Image
 	{
 		/**
-		 * Width and height dimension of elems.
+		 * Width and height dimension of elements.
 		 */
 		public static const ELEM_H_V_DIMENSIONS:int = 37;
 		
@@ -108,7 +108,7 @@ package com.king.group.elements
 		}
 		
 		/**
-		 * Over elem reference getter. This getter will not fetch elemts that are not visible.
+		 * Over elem reference getter. This getter will not fetch elements that are not visible.
 		 * I.E. all elements with position less than 64 (ROW_COUNT * COL_COUNT), instead it will return NULL.
 		 */
 		public function get overElem():GroupElement
@@ -122,7 +122,7 @@ package com.king.group.elements
 		}
 		
 		/**
-		 * Under elem reference getter, null if non existenet.
+		 * Under elem reference getter, null if non existent.
 		 */
 		public function get underElem():GroupElement
 		{
@@ -135,7 +135,7 @@ package com.king.group.elements
 		}
 		
 		/**
-		 * Left elem getter. Null in not existant.
+		 * Left elem getter. Null if not existent.
 		 */
 		public function get leftElem():GroupElement
 		{
@@ -146,7 +146,7 @@ package com.king.group.elements
 		}
 		
 		/**
-		 * Right elem getter. Null if not existant.
+		 * Right elem getter. Null if not existent.
 		 */
 		public function get rightElem():GroupElement
 		{
@@ -165,7 +165,7 @@ package com.king.group.elements
 		}
 		
 		/**
-		 * Selcted flag getter. Read only.
+		 * Selected flag getter. Read only.
 		 */
 		public function get selected():Boolean
 		{
@@ -181,7 +181,7 @@ package com.king.group.elements
 		}
 		
 		/**
-		 * Position settter.
+		 * Position setter.
 		 */
 		public function set position(value:int):void
 		{
@@ -236,97 +236,97 @@ package com.king.group.elements
 			return retVal;
 		}
 		
-		public function moveLeftAnim(onCompleate:Function = null):Tween
+		public function moveLeftAnim(onComplete:Function = null):Tween
 		{
 			var tween:Tween = new Tween(this, MOVE_ANIM_DURATION, Transitions.EASE_OUT);
 			tween.animate("x", this.x + GroupElement.ELEM_H_V_DIMENSIONS + Group.ELEM_GAP);
-			tween.onComplete = onCompleate;
+			tween.onComplete = onComplete;
 			
 			Starling.juggler.add(tween);
 			
 			return tween;
 		}
 		
-		public function moveRightAnim(onCompleate:Function = null):Tween
+		public function moveRightAnim(onComplete:Function = null):Tween
 		{
 			var tween:Tween = new Tween(this, MOVE_ANIM_DURATION, Transitions.EASE_OUT);
 			tween.animate("x", this.x - GroupElement.ELEM_H_V_DIMENSIONS - Group.ELEM_GAP);
-			tween.onComplete = onCompleate;
+			tween.onComplete = onComplete;
 			
 			Starling.juggler.add(tween);
 			
 			return tween;
 		}
 		
-		public function moveDownAnim(onCompleate:Function = null):Tween
+		public function moveDownAnim(onComplete:Function = null):Tween
 		{
 			var tween:Tween = new Tween(this, MOVE_ANIM_DURATION, Transitions.EASE_OUT);
 			tween.animate("y", this.y + GroupElement.ELEM_H_V_DIMENSIONS + Group.ELEM_GAP);
-			tween.onComplete = onCompleate;
+			tween.onComplete = onComplete;
 			
 			Starling.juggler.add(tween);
 			
 			return tween;
 		}
 		
-		public function moveUpAnim(onCompleate:Function = null):Tween
+		public function moveUpAnim(onComplete:Function = null):Tween
 		{
 			var tween:Tween = new Tween(this, MOVE_ANIM_DURATION, Transitions.EASE_OUT);
 			tween.animate("y", this.y - GroupElement.ELEM_H_V_DIMENSIONS - Group.ELEM_GAP);
-			tween.onComplete = onCompleate;
+			tween.onComplete = onComplete;
 			
 			Starling.juggler.add(tween);
 			
 			return tween;
 		}
 		
-		public function bounceLeftAnim(onCompleate:Function = null):Tween
+		public function bounceLeftAnim(onComplete:Function = null):Tween
 		{
 			var fun:Function = function():void
 			{
-				moveRightAnim(onCompleate);
+				moveRightAnim(onComplete);
 			}
 			
 			return moveLeftAnim(fun);
 		}
 		
-		public function bounceRightAnim(onCompleate:Function = null):Tween
+		public function bounceRightAnim(onComplete:Function = null):Tween
 		{
 			var fun:Function = function():void
 			{
-				moveLeftAnim(onCompleate);
+				moveLeftAnim(onComplete);
 			}
 			
 			return moveRightAnim(fun);
 		}
 		
-		public function bounceDownAnim(onCompleate:Function = null):Tween
+		public function bounceDownAnim(onComplete:Function = null):Tween
 		{
 			var fun:Function = function():void
 			{
-				moveUpAnim(onCompleate);
+				moveUpAnim(onComplete);
 			}
 			
 			return moveDownAnim(fun);
 		}
 		
-		public function bounceUpAnim(onCompleate:Function = null):Tween
+		public function bounceUpAnim(onComplete:Function = null):Tween
 		{
 			var fun:Function = function():void
 			{
-				moveDownAnim(onCompleate);
+				moveDownAnim(onComplete);
 			}
 			
 			return moveUpAnim(fun);
 		}
 		
-		public function pullElemDownAnim(columnOffset:int, onCompleate:Function = null):Tween
+		public function pullElemDownAnim(columnOffset:int, onComplete:Function = null):Tween
 		{
 			var tweenDuration:Number = PULL_ANIM_DURATION; //columnOffset / Group.COL_COUNT * PULL_ANIM_DURATION;
 			var movementValue:int = columnOffset / Group.COL_COUNT * (ELEM_H_V_DIMENSIONS + Group.ELEM_GAP);
 			
 			var tween:Tween = new Tween(this, tweenDuration, Transitions.EASE_OUT_BACK);
-			tween.onComplete = onCompleate;
+			tween.onComplete = onComplete;
 			
 			tween.animate("y", this.y + movementValue);
 			
@@ -565,7 +565,7 @@ package com.king.group.elements
 				if (this.underElem != null)
 					this.underElem.stopParticleCircle();
 					
-				this.dispatchEvent(new GroupElementEvent(GroupElementEvent.PARTICLE_CIRCLE_STOPED));
+				this.dispatchEvent(new GroupElementEvent(GroupElementEvent.PARTICLE_CIRCLE_STOPPED));
 			}
 		}
 		

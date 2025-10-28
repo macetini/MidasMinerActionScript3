@@ -1,7 +1,7 @@
 package com.king.meta.constants 
 {
 	/**
-	 * ...
+	 * Graphic constants
 	 * @author mc
 	 */
 	public final class GraphicConstants 

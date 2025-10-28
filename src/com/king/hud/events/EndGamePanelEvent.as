@@ -2,7 +2,7 @@ package com.king.hud.events
 {	
 	import starling.events.Event;
 	/**
-	 * ...
+	 * End game panel event
 	 * @author mc
 	 */
 	public class EndGamePanelEvent extends Event

@@ -5,7 +5,7 @@ package com.king.utils
 	import starling.textures.Texture;
 	
 	/**
-	 * ...
+	 * Utility class for getting textures
 	 * @author mc
 	 */
 	public final class TextureUtil

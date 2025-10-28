@@ -3,7 +3,7 @@ package com.king.hud.events
 	import starling.events.Event;
 	
 	/**
-	 * ...
+	 * Try again panel event
 	 * @author mc
 	 */
 	public class TryAgainPanelEvent extends Event 
